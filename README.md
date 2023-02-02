@@ -8,10 +8,10 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 
 Descrizione:
-- Create un nuovo progetto utilizzando Vite e Vue 3
-- definite i componenti necessari per strutturare il layout come da screenshot allegato.
+- Create un nuovo progetto utilizzando Vite e Vue 3 OK
+- definite i componenti necessari per strutturare il layout come da screenshot allegato. OK
 Quando la struttura a macroblocchi è pronta, 
-- popolate le voci di menu dinamicamente usando i data del componente.
+- popolate le voci di menu dinamicamente usando i data del componente. 
 
 
 Per oggi diamo priorità alla struttura: quando è tutto bello solido, passiamo al Sass!

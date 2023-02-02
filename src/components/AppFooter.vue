@@ -27,6 +27,39 @@ export default {
                     info: 'DC POWER VISA'
                 }
             ],
+            listDcComics: [
+                'Characters',
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Videos',
+                'News'           
+            ],
+            listShop: [
+                'Shop DC',
+                'Shop DC Collectibles'          
+            ],
+            listDC: [
+                'Terms Of Use',
+                'Privacy Policy',
+                'Ad Choices',
+                'Adversing',
+                'Jobs',
+                'Subscriptions',
+                'Talent Workshops',
+                'CPSC Certificates',
+                'Ratings',
+                'Shop Help',
+                'Contact Us'          
+            ],
+            listSites: [
+                'DC',
+                'MAD Magazine',
+                'DC Kids',
+                'DC Universe',
+                'DC Power Visa'
+            ],
             dataSectionThree: [
                 'facebook.png',
                 'twitter.png',
@@ -73,37 +106,49 @@ export default {
 
         <section>
             <div class="section-2 container">
-                <div>
+                <div class="flex">
                     <div class="col-1">
+                        <div>
+                            DC COMICS
+                        </div>
                         <ul>
-                            <li>
+                            <li v-for="item in listDcComics">
                                 <a href="#">
-                                    Lista 1
+                                    {{ item }}
                                 </a>
                             </li>
                         </ul>
+                        <div>
+                            SHOP
+                        </div>
                         <ul>
-                            <li>
+                            <li v-for="item in listShop">
                                 <a href="#">
-                                    Lista 2
+                                    {{ item }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-2">
+                        <div>
+                            DC
+                        </div>
                         <ul>
-                            <li>
+                            <li v-for="item in listDC">
                                 <a href="#">
-                                    Lista 1
+                                    {{ item }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-3">
+                        <div>
+                            SITES
+                        </div>
                         <ul>
-                            <li>
+                            <li v-for="item in listSites">
                                 <a href="#">
-                                    Lista 1
+                                   {{ item }}
                                 </a>
                             </li>
                         </ul>
@@ -173,6 +218,39 @@ export default {
 
         &:last-child {
             background-color: #303030;
+        }   
+    }
+
+    .section-2 {
+
+        div {
+
+            padding: 1rem 0;
+
+            div {
+
+                > div {
+                    color: white;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+                }
+
+                ul {
+                list-style: none;
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+
+                li {
+                    a {
+                        color: #797979;
+                        font-size: 0.8rem;
+                        font-weight: lighter;
+                        text-decoration: none;
+                    }
+
+                }
+            }
         }   
     }
 

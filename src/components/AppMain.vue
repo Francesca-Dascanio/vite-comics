@@ -16,7 +16,7 @@ export default {
         Main
     </div>
     <main>
-        <div>
+        <div class="container">
             {{ message }}
         </div>
     </main>

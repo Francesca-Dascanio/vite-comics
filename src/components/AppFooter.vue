@@ -40,7 +40,7 @@ export default {
     <footer>
         <!-- Fascia azzurra in componente a parte? -->
         <section>
-            <div class="section-1">
+            <div class="section-1 container">
                 <div v-for="obj in dataSectionOne">
                     <img src="" alt="">
                     <span>
@@ -51,7 +51,7 @@ export default {
         </section>
 
         <section>
-            <div class="section-2">
+            <div class="section-2 container">
                 <div>
                     <div class="col-1">
                         <ul>
@@ -92,7 +92,7 @@ export default {
         </section>
 
         <section>
-            <div class="section-3">
+            <div class="section-3 container">
                 <button>
                     <a href="#">
                         SIGN-UP NOW!

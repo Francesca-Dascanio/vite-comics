@@ -1,0 +1,31 @@
+// File scss importati
+@import 'partials/reset.scss';
+
+// Colori
+$color-blue: #0282f9;
+$color-gray: #303030;
+$color-light-gray: #797979;
+$color-black: #1c1c1c;
+$color-white: #ffffff;
+
+// Regole generali
+#app {
+    margin: 1rem 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-btw {
+    justify-content: space-between;
+}
+
+.align-items {
+    align-items: center;
+}

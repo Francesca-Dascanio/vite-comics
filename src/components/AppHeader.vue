@@ -27,15 +27,12 @@ export default {
 </script>
 
 <template>
-    <div>
-        Header
-    </div>
     <header>
-        <div>
+        <div class="container flex space-btw">
             <AppLogo/>
             <nav>
-                <ul v-for="item in navItems">
-                    <li>
+                <ul class="flex">
+                    <li v-for="item in navItems">
                         <a href="#">
                             {{ item }}
                         </a>
@@ -47,5 +44,27 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    nav {
+        line-height: 4rem;
 
+        ul {
+            list-style: none;
+
+            li {
+                margin-left: 1rem;
+
+                &:hover {
+                    border-bottom: 2px solid #0282f9;
+                }
+
+                a {
+                    font-size: 0.8rem;
+                    font-size: bold;
+                    text-decoration: none;
+                    color: black;
+
+                }
+            }
+        }
+    }
 </style>

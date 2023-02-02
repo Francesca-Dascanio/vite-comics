@@ -11,12 +11,15 @@ export default {
 </script>
 
 <template>
-    <div>
-        <!-- Meglio mettere il logo in una a  -->
+    <a href="#">
         <img src="../assets/dc-logo.png" alt="DC logo">
-    </div>
+    </a>
 </template>
 
 <style lang="scss" scoped>
+    img {
+        width: 60px;
+        height: 60px;
+    }
 
 </style>

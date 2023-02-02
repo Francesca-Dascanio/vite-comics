@@ -1,15 +1,10 @@
 <script>
 // import nome-component from './components/nome-component'
-import AppHeader from './components/AppHeader.vue'
-
 export default {
-    name: 'App',
-    components: {
-        AppHeader
-    },
+    name: 'AppHeader',
     data () {
         return {
-
+            message: 'header'
         }
     }
 }
@@ -17,9 +12,11 @@ export default {
 </script>
 
 <template>
-    <AppHeader/>
+    <h1>
+        {{ message }}
+    </h1>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

@@ -1,12 +1,20 @@
 // File scss importati
 @import 'partials/reset.scss';
 
-// Colori
+// Colori -> non funzionano se richiamati in altri file
 $color-blue: #0282f9;
 $color-gray: #303030;
 $color-light-gray: #797979;
 $color-black: #1c1c1c;
 $color-white: #ffffff;
+
+.white {
+    color: $color-white;
+}
+
+.black {
+    background-color: $color-black;
+}
 
 // Regole generali
 #app {
@@ -28,4 +36,8 @@ $color-white: #ffffff;
 
 .align-items {
     align-items: center;
+}
+
+.m-bt {
+    margin-bottom: 1rem;
 }

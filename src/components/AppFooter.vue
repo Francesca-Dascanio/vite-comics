@@ -26,7 +26,31 @@ export default {
                     image: '',
                     info: 'DC POWER VISA'
                 }
-            ]
+            ],
+            dataSectionThree: [
+                'facebook.png',
+                'twitter.png',
+                'youtube.png',
+                'pinterest.png',
+                'periscope.png'
+            ],
+            urlsSectionThree: []        
+        }
+    },
+    methods: {
+        getIcons: function () {
+
+
+            for (let i=0; i < this.dataSectionThree.length; i++) {
+
+                console.log(this.dataSectionThree[i]);
+                const url = '../assets/footer-' + this.dataSectionThree[i];
+
+                this.urlsSectionThree.push(url);
+            }
+            
+            console.log(this.urlsSectionThree);
+            return  this.urlsSectionThree;
         }
     }
 }
@@ -34,9 +58,6 @@ export default {
 </script>
 
 <template>
-    <div>
-        Footer
-    </div>
     <footer>
         <!-- Fascia azzurra in componente a parte? -->
         <section>
@@ -92,38 +113,43 @@ export default {
         </section>
 
         <section>
-            <div class="section-3 container">
-                <button>
+            <div class="section-3 container flex space-btw align-items">
+                <div>
                     <a href="#">
                         SIGN-UP NOW!
                     </a>
-                </button>
+                </div>
                 <div>
-                    <ul>
+                    <ul class="flex align-items">
                         FOLLOW US
+                        <!-- <li v-for="url in getIcons()">
+                            <a href="#">
+                                <img :src="url" alt="icon">
+                            </a>
+                        </li> -->
                         <li>
                             <a href="#">
-                                ICONA
+                                <img src="../assets/footer-facebook.png" alt="icon">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                ICONA
+                                <img src="../assets/footer-twitter.png" alt="icon">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                ICONA
+                                <img src="../assets/footer-youtube.png" alt="icon">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                ICONA
+                                <img src="../assets/footer-pinterest.png" alt="icon">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                ICONA
+                                <img src="../assets/footer-periscope.png" alt="icon">
                             </a>
                         </li>
                     </ul>
@@ -135,5 +161,47 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    section {
 
+        &:first-child {
+            background-color: #0282f9;
+        }
+
+        &:nth-child(2) {
+            background-image: url(../assets/footer-bg.jpg);
+        }
+
+        &:last-child {
+            background-color: #303030;
+        }   
+    }
+
+    .section-3 {
+
+        min-height: 100px;
+        div {
+
+            &:first-child {
+                a {
+                    padding: 1rem;
+                    border: 2px solid #0282f9;
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+            &:last-child {
+                ul {
+                    list-style: none;
+                    color:#0282f9;
+                    font-weight: bold;
+
+                    li {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+        }
+    }
 </style>

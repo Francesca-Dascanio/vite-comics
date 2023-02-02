@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header class="m-bt">
         <div class="container flex space-btw">
             <AppLogo/>
             <nav>
@@ -61,7 +61,7 @@ export default {
                     font-size: 0.8rem;
                     font-size: bold;
                     text-decoration: none;
-                    color: black;
+                    color: #1c1c1c;
 
                 }
             }

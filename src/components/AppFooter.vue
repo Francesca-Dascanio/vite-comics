@@ -7,23 +7,23 @@ export default {
             message: 'footer',
             dataSectionOne: [
                 {
-                    image: '',
+                    image: 'comics-digital-comics.png',
                     info: 'DIGITAL COMICS'
                 },
                 {
-                    image: '',
+                    image: 'comics-merchandise.png',
                     info: 'DC MERCHANDISE'
                 },
                 {
-                    image: '',
+                    image: 'comics-shop-locator.png',
                     info: 'SUBSCRIPTION'
                 },
                 {
-                    image: '',
+                    image: 'comics-subscriptions.png',
                     info: 'COMIC SHOP LOCATOR'
                 },
                 {
-                    image: '',
+                    image: 'dc-power-visa.svg',
                     info: 'DC POWER VISA'
                 }
             ],
@@ -71,19 +71,8 @@ export default {
         }
     },
     methods: {
-        getIcons: function () {
-
-
-            for (let i=0; i < this.dataSectionThree.length; i++) {
-
-                console.log(this.dataSectionThree[i]);
-                const url = '../assets/footer-' + this.dataSectionThree[i];
-
-                this.urlsSectionThree.push(url);
-            }
-            
-            console.log(this.urlsSectionThree);
-            return  this.urlsSectionThree;
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
         }
     }
 }
@@ -95,11 +84,13 @@ export default {
         <!-- Fascia azzurra in componente a parte? -->
         <section>
             <div class="section-1 container">
-                <div v-for="obj in dataSectionOne">
-                    <img src="" alt="">
-                    <span>
-                        {{ obj.info }}
-                    </span>
+                <div class="flex space-ard">
+                    <div v-for="obj in dataSectionOne">
+                        <img :src="getImagePath(`../assets/buy-${obj.image}`)" alt="img">
+                        <span>
+                            {{ obj.info }}
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -167,34 +158,9 @@ export default {
                 <div>
                     <ul class="flex align-items">
                         FOLLOW US
-                        <!-- <li v-for="url in getIcons()">
+                        <li v-for="url in dataSectionThree">
                             <a href="#">
-                                <img :src="url" alt="icon">
-                            </a>
-                        </li> -->
-                        <li>
-                            <a href="#">
-                                <img src="../assets/footer-facebook.png" alt="icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/footer-twitter.png" alt="icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/footer-youtube.png" alt="icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/footer-pinterest.png" alt="icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/footer-periscope.png" alt="icon">
+                                <img :src="getImagePath(`../assets/footer-${url}`)" alt="">
                             </a>
                         </li>
                     </ul>
@@ -219,6 +185,28 @@ export default {
         &:last-child {
             background-color: #303030;
         }   
+    }
+
+    .section-1 {
+
+        div {
+
+            padding: 1rem 0;
+            color: white;
+            font-size: 0.8rem;
+
+                img {
+                    width: 50px;
+                    height: 60px;
+                    object-fit: contain;
+                    vertical-align: middle;
+                    margin-right: 0.5rem;
+                }
+                span {
+                    vertical-align: middle;
+                }
+
+        }
     }
 
     .section-2 {

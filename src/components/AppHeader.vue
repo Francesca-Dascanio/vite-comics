@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-    <header class="m-bt">
+    <header class="p-bt">
         <div class="container flex space-btw">
             <AppLogo/>
             <nav>

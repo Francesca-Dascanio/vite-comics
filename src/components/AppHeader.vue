@@ -53,9 +53,10 @@ export default {
 
             li {
                 margin-left: 1rem;
+                padding: 1rem 0;
 
                 &:hover {
-                    border-bottom: 2px solid $color-blue;
+                    border-bottom: 4px solid $color-blue;
                 }
 
                 a {

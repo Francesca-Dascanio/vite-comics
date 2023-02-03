@@ -25,9 +25,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    img {
+    a {
+        padding: 1rem 0;
+
+        img {
         width: 60px;
         height: 60px;
     }
+    }
+    
 
 </style>

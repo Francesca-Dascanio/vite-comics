@@ -36,7 +36,7 @@ export default {
 
         div:first-child {
             width: 100%;
-            
+       
             img {
                 width: 100%;
                 height: 189px;

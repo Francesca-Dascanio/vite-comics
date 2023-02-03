@@ -125,13 +125,6 @@ export default {
 
     main {
         background-color: $color-black;
-
-        // .main-container {
-        //     // position: relative;
-        //     // top: 0;
-        //     // left: 0;
-
-        // }
     }
 
     .jumbo {
@@ -149,8 +142,8 @@ export default {
         .container {
 
             position: relative;
-            // top: 0;
-            // left: 0;
+            top: 0;
+            left: 0;
 
             .label {
                 position: absolute;

@@ -104,7 +104,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    
+@import '../styles/partials/variables.scss';
     .section-2 {
 
         div {
@@ -114,7 +114,7 @@ export default {
             div {
 
                 > div {
-                    color: white;
+                    color: $color-white;
                     font-weight: bold;
                     margin-bottom: 1rem;
                 }
@@ -127,7 +127,7 @@ export default {
 
                 li {
                     a {
-                        color: #797979;
+                        color: $color-light-gray;
                         font-size: 0.8rem;
                         font-weight: lighter;
                         text-decoration: none;

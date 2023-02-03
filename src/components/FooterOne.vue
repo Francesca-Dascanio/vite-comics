@@ -53,12 +53,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/partials/variables.scss';
     .section-1 {
 
         div {
 
             padding: 1rem 0;
-            color: white;
+            color: $color-white;
             font-size: 0.8rem;
 
                 img {

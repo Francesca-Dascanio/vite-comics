@@ -32,10 +32,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/partials/variables.scss';
+
     section {
 
         &:first-child {
-            background-color: #0282f9;
+            background-color: $color-blue;
         }
 
         &:nth-child(2) {
@@ -43,7 +45,7 @@ export default {
         }
 
         &:last-child {
-            background-color: #303030;
+            background-color: $color-gray;
         }   
     }
 

@@ -45,7 +45,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    
+@import '../styles/partials/variables.scss';
     .section-3 {
 
         min-height: 100px;
@@ -54,8 +54,8 @@ export default {
                 &:first-child {
                     a {
                         padding: 1rem;
-                        border: 2px solid #0282f9;
-                        color: white;
+                        border: 2px solid $color-blue;
+                        color: $color-white;
                         font-weight: bold;
                         text-decoration: none;
                     }
@@ -63,7 +63,7 @@ export default {
                 &:last-child {
                     ul {
                         list-style: none;
-                        color:#0282f9;
+                        color: $color-blue;
                         font-weight: bold;
 
                         li {

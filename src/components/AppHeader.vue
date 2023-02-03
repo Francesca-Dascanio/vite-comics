@@ -44,6 +44,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/partials/variables.scss';
     nav {
         line-height: 4rem;
 
@@ -54,7 +55,7 @@ export default {
                 margin-left: 1rem;
 
                 &:hover {
-                    border-bottom: 2px solid #0282f9;
+                    border-bottom: 2px solid $color-blue;
                 }
 
                 a {

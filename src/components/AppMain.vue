@@ -125,6 +125,7 @@ export default {
 
     main {
         background-color: $color-black;
+
     }
 
     .jumbo {

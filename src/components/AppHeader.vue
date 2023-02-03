@@ -27,8 +27,8 @@ export default {
 </script>
 
 <template>
-    <header class="p-bt">
-        <div class="container flex space-btw">
+    <header>
+        <div class="flex space-btw">
             <AppLogo/>
             <nav>
                 <ul class="flex">
@@ -45,6 +45,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '../styles/partials/variables.scss';
+@import '../styles/partials/mixins.scss';
+
+    header {
+        > div {
+            @include div;
+        }
+    }
+
     nav {
         line-height: 4rem;
 
@@ -54,16 +62,21 @@ export default {
             li {
                 margin-left: 1rem;
                 padding: 1rem 0;
+                border-bottom: 4px solid white;
 
                 &:hover {
                     border-bottom: 4px solid $color-blue;
                 }
 
                 a {
-                    font-size: 0.8rem;
-                    font-size: bold;
-                    text-decoration: none;
-                    color: #1c1c1c;
+
+                    @include a (0.8rem, $color-black);
+                    
+
+                    // font-size: 0.8rem;
+                    // font-size: bold;
+                    // text-decoration: none;
+                    // color: #1c1c1c;
 
                 }
             }

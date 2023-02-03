@@ -126,12 +126,12 @@ export default {
     main {
         background-color: $color-black;
 
-        .main-container {
-            position: relative;
-            top: 0;
-            left: 0;
+        // .main-container {
+        //     // position: relative;
+        //     // top: 0;
+        //     // left: 0;
 
-        }
+        // }
     }
 
     .jumbo {
@@ -147,10 +147,15 @@ export default {
     .main-section {
 
         .container {
+
+            position: relative;
+            // top: 0;
+            // left: 0;
+
             .label {
                 position: absolute;
-                top: 250px;
-                left: 138px;
+                top: -70px;
+                left: 0;
                 color: $color-white;
                 padding: 1rem;
                 background-color: $color-blue;
@@ -158,9 +163,12 @@ export default {
 
             .cards-container {
                 flex-wrap: wrap;
+                margin: 3rem 0;
 
                 .card-style {
-                    width: calc(((100% / 6) - 10px) + 10px);
+                    width: calc((100% / 6) - 10px);
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
                 }
             }
 
@@ -171,6 +179,10 @@ export default {
                 border: none;
                 font-size: 1rem;
                 text-align: center;
+                margin-bottom: 1rem;
+                margin-left: 50%;
+                transform: translate(-50%);
+
             }
         }
         

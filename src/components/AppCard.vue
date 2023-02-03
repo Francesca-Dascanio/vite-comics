@@ -38,14 +38,16 @@ export default {
             width: 100%;
             
             img {
-                // height: 192px;
+                width: 100%;
+                height: 189px;
+                object-fit: cover;
             }
 
         }
 
         div:last-child {
-            margin-top: 1rem;
-
+            color: $color-white;
+            margin-bottom: 2rem;
         }
     }
 

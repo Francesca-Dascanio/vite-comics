@@ -1,11 +1,13 @@
 <script>
 // import nome-component from './components/nome-component'
 import AppCard from './AppCard.vue';
+import AppJumbo from './AppJumbo.vue';
 
 export default {
     name: 'AppMain',
     components: {
-        AppCard
+        AppCard,
+        AppJumbo
     },
     data () {
         return {
@@ -84,6 +86,22 @@ export default {
                 }
             ]
         }
+        
+    },
+    methods: {
+        getMore: function () {
+            const moreCards = document.getElementById('moreCards');
+            moreCards.classList.remove('not-active');
+            const button = document.querySelector('button');
+            button.innerHTML = 'SHOW LESS';
+            button.addEventListener('click',
+                function () {
+                    button.innerHTML = 'LOAD MORE';
+                    moreCards.classList.add('not-active');
+                }
+            
+            )
+        }
     }
 }
 
@@ -92,11 +110,9 @@ export default {
 <template>
     <main>
         <div class="main-container">
-             <!-- Qui Jumbo -->
-            <div class="jumbo">
+            <AppJumbo/>
 
-            </div>
-            <!-- Qui main-section -->
+
             <div class="main-section">
                 <div class="container">
                     <div class="label">
@@ -110,9 +126,18 @@ export default {
                         :text="card.series"/>
                     </div>
 
-                    <button>
+                    <div id="moreCards" class="cards-container flex space-btw not-active">
+                        <!-- Qui componente card -->
+                        <AppCard v-for="card in cards" class="card-style"
+                        :image="card.thumb"
+                        :text="card.series"/>
+                    </div>
+
+                    <button @click="getMore()">
                         LOAD MORE
                     </button>
+
+                    
                 </div>
 
             </div>
@@ -126,16 +151,6 @@ export default {
     main {
         background-color: $color-black;
 
-    }
-
-    .jumbo {
-        width: 100%;
-        min-height: 300px;
-        background-image: url('../assets/jumbotron.jpg');
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        object-fit: contain;
     }
 
     .main-section {

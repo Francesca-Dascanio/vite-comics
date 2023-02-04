@@ -39,7 +39,7 @@ export default {
        
             img {
                 width: 100%;
-                height: 189px;
+                height: calc((1200px / 6) - 10px);
                 object-fit: cover;
             }
 
